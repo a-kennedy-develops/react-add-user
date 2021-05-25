@@ -1,12 +1,11 @@
 import "./components/UI/UI.scss";
 import "./components/AddUser/AddUser.js";
 import AddUser from "./components/AddUser/AddUser.js";
+import AddedUsers from "./components/AddedUsers/AddedUsers";
 import { useState } from "react";
 
-const USERS_DATA = [];
-
 const App = () => {
-  const [users, setUsers] = useState(USERS_DATA);
+  const [users, setUsers] = useState([]);
 
   const onAddUserHandler = (newUser) => {
     console.log("Adding user in App...");
@@ -15,14 +14,11 @@ const App = () => {
     });
   };
 
-  // const checkState = () => {
-  //   console.log(users);
-  // };
-
   return (
     <div className="App">
       <AddUser onAddUser={onAddUserHandler} />
-      {/* <button className="btn" onClick={checkState}>Check state</button> */}
+      {/* If there are no users, show nothing. If there are, populate AddedUsers component */}
+      {users.length === 0 ? "" : <AddedUsers addedUsers={users} />}
     </div>
   );
 };

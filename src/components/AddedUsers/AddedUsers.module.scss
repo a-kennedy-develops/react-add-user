@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  margin: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 50rem;
+  }
+
+  .container-item {
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+}
+
+.added-user {
+  border: 1px solid #ccc;
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+// Unordered list styling
+.added-user-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+  row-gap: 1rem;
+
+  padding-left: 0;
+  width: 100%;
+}
