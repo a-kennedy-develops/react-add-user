@@ -1,9 +1,11 @@
 import './App.scss';
+import './components/AddUser/AddUser.js';
+import AddUser from './components/AddUser/AddUser.js';
 
 function App() {
   return (
     <div className="App">
-      Initial set up for Add User App
+      <AddUser />
     </div>
   );
 }

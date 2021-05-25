@@ -1,0 +1,61 @@
+.card {
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.input-fields {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-field {
+  text-align: left;
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  input {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    // width: 20rem;
+    // max-width: 100%;
+    width: 100%;
+  }
+}
+
+.btn-group {
+  flex-direction: row;
+  display: flex;
+
+  .btn {
+    margin-right: 1rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: inherit;
+  color: #fff;
+
+  &.btn-add {
+    background-color: rgb(0, 78, 0);
+    border-color: rgb(0, 78, 0);
+
+    &:hover {
+      background-color: rgb(4, 156, 4);
+    }
+  }
+}
