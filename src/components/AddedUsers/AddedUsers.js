@@ -1,12 +1,20 @@
 import Card from "../UI/Card";
-import AddedUsersList from "./AddedUsersList";
+import AddedUser from "./AddedUser";
 
 import styles from "./AddedUsers.module.scss";
 
 const AddedUsers = (props) => {
   return (
     <Card className={styles.container}>
-      <AddedUsersList addedUsers={props.addedUsers} />
+      <ul className={styles["added-user-list"]}>
+      {props.addedUsers.map((user) => (
+        <AddedUser
+          key={user.id}
+          userName={user.userName}
+          userAge={user.userAge}
+        />
+      ))}
+    </ul>
     </Card>
   );
 };
