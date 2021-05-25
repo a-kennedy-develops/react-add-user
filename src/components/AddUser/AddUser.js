@@ -10,6 +10,7 @@ const AddUser = (props) => {
   const [enteredAge, setEnteredAge] = useState("");
 
   const onAddUserHandler = (event) => {
+    event.preventDefault();
     console.log("Adding user in AddUser..");
     let newUser = {
       id: Math.random(),
@@ -31,25 +32,27 @@ const AddUser = (props) => {
 
   return (
     <Card className={styles.container}>
-      <div className="input-fields">
-        <TextInput
-          label="Username"
-          type="text"
-          value={enteredUserName}
-          returnInputHandler={getUserNameHandler}
-        />
-        <TextInput
-          label="Age (Years)"
-          type="number"
-          value={enteredAge}
-          returnInputHandler={getAgeHandler}
-        />
-      </div>
-      <div className="btn-group">
-        <button className="btn btn-add" onClick={onAddUserHandler}>
-          Add User
-        </button>
-      </div>
+      <form onSubmit={onAddUserHandler}>
+        <div className="input-fields">
+          <TextInput
+            label="Username"
+            type="text"
+            value={enteredUserName}
+            returnInputHandler={getUserNameHandler}
+          />
+          <TextInput
+            label="Age (Years)"
+            type="number"
+            value={enteredAge}
+            returnInputHandler={getAgeHandler}
+          />
+        </div>
+        <div className="btn-group">
+          <button type="submit" className="btn btn-add">
+            Add User
+          </button>
+        </div>
+      </form>
     </Card>
   );
 };
