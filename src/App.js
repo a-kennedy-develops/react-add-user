@@ -1,4 +1,3 @@
-import "./components/UI/UI.scss";
 import "./components/AddUser/AddUser.js";
 import AddUser from "./components/AddUser/AddUser.js";
 import AddedUsers from "./components/AddedUsers/AddedUsers";

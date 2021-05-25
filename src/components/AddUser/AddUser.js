@@ -1,5 +1,6 @@
 import Card from "../UI/Card";
 import TextInput from "../UI/TextInput";
+import Button from "../UI/Button";
 
 import { useState } from "react";
 
@@ -48,9 +49,9 @@ const AddUser = (props) => {
           />
         </div>
         <div className="btn-group">
-          <button type="submit" className="btn btn-add">
+          <Button type="submit" className="btn-add">
             Add User
-          </button>
+          </Button>
         </div>
       </form>
     </Card>
