@@ -7,14 +7,14 @@ const AddedUsers = (props) => {
   return (
     <Card className={styles.container}>
       <ul className={styles["added-user-list"]}>
-      {props.addedUsers.map((user) => (
-        <AddedUser
-          key={user.id}
-          userName={user.userName}
-          userAge={user.userAge}
-        />
-      ))}
-    </ul>
+        {props.addedUsers.map((user) => (
+          <AddedUser
+            key={user.id}
+            userName={user.userName}
+            userAge={user.userAge}
+          />
+        ))}
+      </ul>
     </Card>
   );
 };
