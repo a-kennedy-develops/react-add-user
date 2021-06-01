@@ -17,7 +17,7 @@ const AddUser = (props) => {
 
     console.log("Adding user in AddUser..");
 
-    if (enteredAge.trim().length === 0 || enteredUserName.trim() === 0) {
+    if (enteredAge.trim().length === 0 || enteredUserName.trim().length === 0) {
       setInputError({
         title: "Invalid input",
         message: "Please enter a valid name and age (non-empty values).",
