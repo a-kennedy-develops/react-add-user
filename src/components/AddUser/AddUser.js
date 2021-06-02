@@ -3,9 +3,10 @@ import TextInput from "../UI/TextInput";
 import Button from "../UI/Button";
 import Modal from "../UI/Modal";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 import styles from "./AddUser.module.scss";
+import "../UI/UI.scss";
 
 const AddUser = (props) => {
   const [enteredUserName, setEnteredUserName] = useState("");
@@ -51,11 +52,12 @@ const AddUser = (props) => {
   };
 
   const onCloseModalHandler = (event) => {
+    console.log("Test");
     setInputError();
   };
 
   return (
-    <>
+    <React.Fragment>
       {inputError && (
         <Modal
           title={inputError.title}
@@ -86,7 +88,7 @@ const AddUser = (props) => {
           </div>
         </form>
       </Card>
-    </>
+    </React.Fragment>
   );
 };
 
