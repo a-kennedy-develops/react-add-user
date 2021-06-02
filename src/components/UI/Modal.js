@@ -1,12 +1,11 @@
 import "./UI.scss";
 import Card from "./Card";
 import Button from "./Button";
-import Wrapper from "../Helpers/Wrapper";
 // import classes from "*.module.css";
 
 function Modal(props) {
   return (
-    <Wrapper>
+    <>
       <div className="overlay"></div>
       <Card
         className={
@@ -25,7 +24,7 @@ function Modal(props) {
           </Button>
         </footer>
       </Card>
-    </Wrapper>
+    </>
   );
 }
 

@@ -14,11 +14,12 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    // Using React.Fragment short hand
+    <>
       <AddUser onAddUser={onAddUserHandler} />
       {/* If there are no users, show nothing. If there are, populate AddedUsers component */}
       {users.length === 0 ? "" : <AddedUsers addedUsers={users} />}
-    </div>
+    </>
   );
 };
 

@@ -2,7 +2,6 @@ import Card from "../UI/Card";
 import TextInput from "../UI/TextInput";
 import Button from "../UI/Button";
 import Modal from "../UI/Modal";
-import Wrapper from "../Helpers/Wrapper";
 
 import { useState } from "react";
 
@@ -56,7 +55,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <Wrapper>
+    <>
       {inputError && (
         <Modal
           title={inputError.title}
@@ -87,7 +86,7 @@ const AddUser = (props) => {
           </div>
         </form>
       </Card>
-    </Wrapper>
+    </>
   );
 };
 
