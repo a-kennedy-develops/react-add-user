@@ -1,8 +1,15 @@
 import "./UI.scss";
 
 function Card(props) {
-  const classes = "card " + props.className;
-  return <div className={classes}>{props.children}</div>;
+  return (
+    <div
+      className={
+        props.className === undefined ? "card" : "card " + props.className
+      }
+    >
+      {props.children}
+    </div>
+  );
 }
 
 export default Card;

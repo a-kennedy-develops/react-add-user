@@ -5,9 +5,8 @@ function TextInput(props) {
     props.returnInputHandler(event.target.value);
   };
 
-  const classes = "input-field " + props.className;
   return (
-    <div className={classes}>
+    <div className={props.className === undefined ? "input-field" : "input-field " + props.className}>
       <label>{props.label}</label>
       <input
         type={props.type}

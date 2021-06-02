@@ -1,14 +1,15 @@
 import "./UI.scss";
 
 function Button(props) {
-  const classes = "btn " + props.className;
   return (
     <button
-      className={classes}
+      className={
+        props.className === undefined ? "btn" : "btn " + props.className
+      }
       type={props.type || "button"}
       onClick={props.onClick}
     >
-        {props.children}
+      {props.children}
     </button>
   );
 }
